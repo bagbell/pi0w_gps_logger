@@ -1,0 +1,15 @@
+{
+  "name": "cartrace",
+  "version": "1.0.0",
+  "description": "show gps location on baidu map",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "john bao",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "ws": "^7.4.4"
+  }
+}

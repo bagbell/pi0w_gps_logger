@@ -1,0 +1,9 @@
+[Unit]
+Description=gps logger
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/bao/gps.py
+
+[Install]
+WantedBy=multi-user.target

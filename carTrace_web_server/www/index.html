@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        body,
+        html,
+        #allmap {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            margin: 0;
+            font-family: "微软雅黑";
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="//mapopen.bj.bcebos.com/github/BMapGLLib/TrackAnimation/src/TrackAnimation.min.js"></script>
+    <script type="text/javascript"
+        src="//api.map.baidu.com/api?type=webgl&v=1.0&ak=[MY_BAIDU_MAP_SK]"></script>
+    <script src="js/gpsTrace.js"></script>
+
+    <title>GPS Trace</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<body>
+
+    <div class="column left" style="background-color:#363634;">
+        <select id="yearSelector" onchange='yearChanged();'></select>
+        <div id="dayList"></div>
+    </div>
+    <div class="column right" style="background-color:#545454;">
+        <div id="allmap"></div>
+        <div id="loading" class="loader loader-dot">
+            <div class="dot dot1"></div>
+            <div class="dot dot2"></div>
+            <div class="dot dot3"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script type="text/javascript">
+    var trace;
+    $(document).ready(function () {
+        trace = new gpsTrace();
+    });
+</script>
